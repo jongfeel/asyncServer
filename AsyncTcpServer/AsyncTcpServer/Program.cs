@@ -40,10 +40,16 @@ namespace AsyncTcpServer
             {
                 while (client.Client.Poll(1, SelectMode.SelectRead) == false)
                 {
-                    #region Read
-                    byte[] readByte = new byte[4096];
-                    int count = await networkStream.ReadAsync(readByte, 0, readByte.Length);
-                    string message = Encoding.Default.GetString(readByte, 0, count);
+                    #region Read - using StringBuilder
+                    byte[] readByte = new byte[4];
+                    StringBuilder sb = new StringBuilder();
+                    do
+                    {
+                        int count = await networkStream.ReadAsync(readByte, 0, readByte.Length);
+                        sb.Append(Encoding.Default.GetString(readByte, 0, count));
+                    } while (networkStream.DataAvailable);
+                                        
+                    string message = sb.ToString();
                     Console.WriteLine("Read: " + message);
                     #endregion
                 }
