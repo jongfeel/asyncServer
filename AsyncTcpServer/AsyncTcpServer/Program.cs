@@ -17,6 +17,8 @@ namespace AsyncTcpServer
             TcpListener listener = new TcpListener(IPAddress.Any, 12346);
             listener.Start();
             
+            Console.WriteLine("Branch test!");
+
             while (true)
             {
                 //if (IsAccepted == false)
