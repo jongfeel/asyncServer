@@ -1,6 +1,0 @@
-C:\Users\kjp10\Documents\GitHub\asyncServer\AsyncTcpServer\AsyncTcpServer\bin\Debug\AsyncTcpServer.exe.config
-C:\Users\kjp10\Documents\GitHub\asyncServer\AsyncTcpServer\AsyncTcpServer\bin\Debug\AsyncTcpServer.exe
-C:\Users\kjp10\Documents\GitHub\asyncServer\AsyncTcpServer\AsyncTcpServer\bin\Debug\AsyncTcpServer.pdb
-C:\Users\kjp10\Documents\GitHub\asyncServer\AsyncTcpServer\AsyncTcpServer\obj\Debug\AsyncTcpServer.csprojResolveAssemblyReference.cache
-C:\Users\kjp10\Documents\GitHub\asyncServer\AsyncTcpServer\AsyncTcpServer\obj\Debug\AsyncTcpServer.exe
-C:\Users\kjp10\Documents\GitHub\asyncServer\AsyncTcpServer\AsyncTcpServer\obj\Debug\AsyncTcpServer.pdb
