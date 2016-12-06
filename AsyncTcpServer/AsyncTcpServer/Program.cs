@@ -16,15 +16,29 @@ namespace AsyncTcpServer
         {
             TcpListener listener = new TcpListener(IPAddress.Any, 12346);
             listener.Start();
-            Console.WriteLine("Listening...");
-
+            
             while (true)
             {
-                if (IsAccepted == false)
-                {
-                    Accept(listener);
-                }
+                //if (IsAccepted == false)
+                //{
+                //    Accept(listener);
+                //}
+                
+                Console.WriteLine("Listening...");
+
+                TcpClient client = listener.AcceptTcpClient();
+                Console.WriteLine("Accepted!!");
+
+                IPEndPoint endpoint = client.Client.LocalEndPoint as IPEndPoint;
+                Console.WriteLine("Client: " + endpoint?.Address);
+                
+                client.Close();
             }
+        }
+
+        public async static Task<string> ReadLineAsync()
+        {
+            return await Console.In.ReadLineAsync();
         }
 
         public async static void Accept(TcpListener listener)
